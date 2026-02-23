@@ -9,6 +9,11 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime
 
+@st.cache_data
+def load_data():
+    return pd.read_csv("Automatizador/base_financiera.csv")
+
+df = load_data()
 
 st.set_page_config(
     page_title="Dashboard Financiero Internacional", layout="wide")
@@ -208,4 +213,5 @@ if st.button("Generar y Enviar Reporte"):
 
     else:
         st.warning("Ingresa un correo válido.")
+
 
