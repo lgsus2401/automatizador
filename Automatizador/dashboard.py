@@ -30,7 +30,7 @@ st.title("🌍 Dashboard Financiero Internacional")
 
 # Cargar datos
 
-df = pd.read_csv("base_financiera.csv", encoding="utf-8")
+df = pd.read_csv("Automatizador/base_financiera.csv", encoding="utf-8")
 
 df = run_validation(df)
 df = add_financial_columns(df)
@@ -208,3 +208,4 @@ if st.button("Generar y Enviar Reporte"):
 
     else:
         st.warning("Ingresa un correo válido.")
+
